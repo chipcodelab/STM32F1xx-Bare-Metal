@@ -2,8 +2,7 @@
  ******************************************************************************
  * @file			: main.c
  * @author			: C.D HALWATURA
- * @brief			: Main program body
- * 					: LED FLASH
+ * @brief			: LED Blink connected to PA5 and PC13 pin
  ******************************************************************************
  * @attention
  *
@@ -14,38 +13,26 @@
  */
 
 /*
- * MICROCONTROLLER SERIES						- STM32F1 / ARM - CORTEX M3
- * MICROCONTROLLER PACKAGE						- LQFP 48
- * COMPATIBLE MICROCONTROLLERS					- STM32F103C8T6, STM32F101xx, STM32F102xx, STM32F103xx, STM32F105xx, STM32F107xx
+ * Compatible Microcontrollers
+ *
+ * Series						- STM32F1xx / ARM - CORTEX M3
+ * Package						- LQFP 48
+ * Compatible Microcontrollers	- STM32F103C8T6, STM32F101xx, STM32F102xx, STM32F103xx, STM32F105xx, STM32F107xx
  */
-
-/*
- *	NOTES: MAKE SURE TO CHANGE STARTUP, RAM AND FLASH SIZE DATA. THESE FILES SHOULD BE ABLE TO LOCATE ROOT DIRECTORY.
- *
- *	STM32F103CBTX_FLASH.ld
- *
-MEMORY
-{
-  RAM    (xrw)    : ORIGIN = 0x20000000,   LENGTH = 20K
-  FLASH    (rx)    : ORIGIN = 0x8000000,   LENGTH = 128K
-}
- *
- *
- * */
 
 #include <stdint.h>
 
 /*
  *
- * Toggle LED connected to PA5
+ * LED Blink connected to PA5
  *
- * Port - A
+ * Port	- A
  * Pin	- 5
  *
- * APB2
- * RCC -> APB2ENR
- * GPIOx_MODER
- * GPIOx_ODR
+ * LED Blink connected to PC13
+ *
+ * Port - C
+ * Pin	- 13
  *
  * */
 
